@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b10">
+  <title>tinyaf — Telegram Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+    <video id="bgVideo" autoplay muted loop playsinline poster="assets/background.jpg">
+      <source src="assets/background.mp4" type="video/mp4">
+    </video>
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main class="page">
+    <section class="profile-card" id="profileCard">
+      <div class="profile-top">
+        <div class="avatar-wrap">
+          <img id="avatar" class="avatar" src="assets/avatar.jpg" alt="Profile avatar">
+          <span class="status-dot" title="Online"></span>
+        </div>
+
+        <div class="identity">
+          <div class="name-row">
+            <h1 id="displayName">tinyaf</h1>
+            <span class="verified" aria-label="Verified">✓</span>
+          </div>
+          <p id="username">@tinyaf</p>
+        </div>
+      </div>
+
+      <p id="bio" class="bio">just another soul on the internet ✦</p>
+
+      <div class="socials" id="socials">
+        <a href="https://t.me/" class="social" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+        <a href="#" class="social" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="#" class="social" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="music">
+        <button id="playBtn" class="play-btn" aria-label="Play music">▶</button>
+        <div class="track">
+          <div class="track-title" id="trackTitle">midnight memories</div>
+          <div class="track-artist" id="trackArtist">tinyaf</div>
+        </div>
+        <div class="equalizer" id="equalizer" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+
+      <audio id="audio" preload="metadata">
+        <source src="assets/music.mp3" type="audio/mpeg">
+      </audio>
+
+      <div class="stats">
+        <span>♡ <b id="views">1,284</b> views</span>
+        <span>•</span>
+        <span id="location">Internet</span>
+      </div>
+    </section>
+
+    <button id="enterBtn" class="enter-btn">ENTER PROFILE</button>
+  </main>
+
+  <footer>
+    <span>made for Telegram</span>
+  </footer>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
